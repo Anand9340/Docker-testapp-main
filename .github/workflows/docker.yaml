@@ -3,7 +3,7 @@ name: Build and Push Docker Image
 on:
   push:
     branches:
-      - main   # jab bhi main branch pe push hoga, ye chalega
+      - main   
 
 jobs:
   build:
