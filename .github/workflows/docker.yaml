@@ -2,7 +2,8 @@ name: Build and Push Docker Image
 
 on:
   push:
-    branches: [ "main" ]
+    branches:
+      - main   # jab bhi main branch pe push hoga, ye chalega
 
 jobs:
   build:
@@ -24,5 +25,6 @@ jobs:
     - name: Build and push Docker image
       uses: docker/build-push-action@v4
       with:
+        context: .
         push: true
         tags: anandsingh93/docker-testapp-main:latest
